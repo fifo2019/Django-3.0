@@ -1,0 +1,14 @@
+{% extends 'base_signup.html' %}
+
+{% block title %}Войти{% endblock %}
+
+{% block heading %}Пиццерия - страница входа!{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-red pull-right">Войти</button>
+    </form>
+{% endblock %}
+
